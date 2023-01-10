@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "Server/internal/proto/knocking";
+
+service Knocking {
+  rpc KnockDB (RequestParam) returns(ResponseParam){}
+}
+
+message RequestParam{
+  int32 count = 1;
+}
+
+message ResponseParam{
+  string msg = 1;
+}
